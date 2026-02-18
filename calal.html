@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For Calal 🤍</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500;700&family=Handlee&display=swap" rel="stylesheet">
+
+  <style>
+    /* Use dvh (Dynamic Viewport Height) for mobile browsers to account for address bars */
+    html, body {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      height: 100dvh; 
+      position: fixed; /* Prevents "pull-to-refresh" on mobile */
+    }
+
+    body {
+      background: linear-gradient(-45deg, #ffdee9, #b5fffc, #ffffff, #ffdee9);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      font-family: 'Fredoka', sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: none; /* Prevents accidental zooming/scrolling */
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .float-card {
+      animation: floatCard 5s ease-in-out infinite;
+      will-change: transform;
+      z-index: 20;
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -10%;
+      user-select: none;
+      pointer-events: none;
+      animation: rise 6s linear forwards;
+      z-index: 5;
+      will-change: transform;
+    }
+
+    @keyframes rise {
+      from { transform: translateY(0) scale(0.5); opacity: 0; }
+      20% { opacity: 0.8; }
+      100% { transform: translateY(-120vh) translateX(40px) scale(1.5); opacity: 0; }
+    }
+
+    .polaroid {
+      background: white;
+      padding: 5px 5px 15px 5px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    /* Pulse effect optimized for mobile */
+    .pulse-yes {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(236, 72, 153, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0); }
+    }
+
+    .custom-scroll {
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    }
+    
+    .custom-scroll::-webkit-scrollbar { width: 4px; }
+    .custom-scroll::-webkit-scrollbar-thumb { background: #fbcfe8; border-radius: 10px; }
+
+    .spin-music {
+      animation: spin 6s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bg-elements"></div>
+
+  <div class="float-card relative bg-white/75 backdrop-blur-xl rounded-[2.5rem] shadow-2xl p-6 sm:p-8 max-w-[340px] w-[90%] text-center border-[4px] border-white/90 overflow-hidden">
+    
+    <span class="absolute top-2 left-4 text-2xl">🌸</span>
+    <span class="absolute top-2 right-4 text-2xl">🎀</span>
+
+    <h1 class="text-3xl font-bold text-pink-500 mb-1" style="font-family: 'Handlee', cursive;">
+      hey calal 🤍
+    </h1>
+
+    <p class="text-gray-400 mb-6 text-[9px] tracking-[0.2em] uppercase font-bold">
+      specially for you
+    </p>
+
+    <div class="flex justify-center gap-2 mb-10 relative h-24">
+      <div class="polaroid absolute left-2 rotate-[-10deg]">
+        <img src="photo1.jpeg" class="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-sm" onerror="this.src='https://via.placeholder.com/100?text=🤍'"/>
+      </div>
+      <div class="polaroid absolute left-1/2 -translate-x-1/2 -top-2 rotate-[2deg]">
+        <img src="photo2.jpeg" class="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-sm" onerror="this.src='https://via.placeholder.com/100?text=✨'"/>
+      </div>
+      <div class="polaroid absolute right-2 rotate-[10deg]">
+        <img src="photo3.png" class="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-sm" onerror="this.src='https://via.placeholder.com/100?text=🌸'"/>
+      </div>
+    </div>
+
+    <div class="custom-scroll bg-white/50 rounded-2xl p-4 mb-6 text-left text-gray-700 text-xs sm:text-sm leading-relaxed max-h-[180px] overflow-y-auto border border-pink-100">
+      <p class="mb-3">i don’t like you just because you’re cute <span class="text-pink-400 font-bold">(even though you are)</span>.</p>
+      <p class="mb-3">it’s everything combined. your vibe is different. you’re genuinely my type.</p>
+      <p class="mb-3 font-medium text-pink-600 bg-pink-50/50 p-2 rounded-lg">you’re a little weird — but in the best way. random, unexpected, sometimes unhinged, and it fits me perfectly.</p>
+      <p class="mb-3">what really hits is how you match my energy. when i do random dumb stuff, you stay normal. you even go along with it.</p>
+      <p class="mb-3 italic opacity-80">talking to you feels easy — like you just get it. i can just be me.</p>
+      <p class="font-bold text-gray-800">you’re a 10/10 to me. not glazing — just facts. 🤍</p>
+    </div>
+
+    <div id="askArea">
+      <h2 class="text-xl font-bold text-gray-800 mb-6">will you be my girlfriend?</h2>
+      <div class="flex justify-center gap-4 mb-2 h-12 items-center relative">
+        <button id="yesBtn" onclick="sayYes()" class="pulse-yes px-8 py-2.5 rounded-full bg-pink-500 text-white font-bold shadow-lg z-30 active:scale-95 transition-transform">
+          yes
+        </button>
+        <button id="noBtn" onclick="moveNo()" onmouseover="moveNo()" class="px-6 py-2.5 rounded-full bg-gray-200 text-gray-500 font-bold shadow-sm transition-all duration-200">
+          no
+        </button>
+      </div>
+    </div>
+
+    <div id="message" class="hidden animate-bounce py-4">
+        <p class="text-xl font-bold text-pink-600">
+          THANK YOU 🤍<br/>
+          <span class="text-[10px] font-medium tracking-widest uppercase">You made my day</span>
+        </p>
+    </div>
+
+    <div class="bg-white/80 rounded-2xl p-3 flex gap-3 items-center border border-white mt-4 shadow-sm">
+      <img id="albumArt" src="album.jpg" class="w-10 h-10 rounded-full object-cover border-2 border-pink-200" onerror="this.src='https://via.placeholder.com/50?text=♫'"/>
+      <div class="flex-1 text-left overflow-hidden">
+        <p class="text-[8px] font-bold text-pink-400 uppercase tracking-tighter">Now Playing</p>
+        <p class="text-[10px] font-bold text-gray-700 truncate">our song 🎵</p>
+        <audio id="music" src="song.mp3" loop preload="auto"></audio>
+        <div class="flex items-center gap-2">
+          <button id="playBtn" onclick="togglePlay()" class="text-pink-500 text-lg font-bold">▶</button>
+          <input id="progress" type="range" value="0" class="w-full h-1 bg-pink-100 rounded-lg appearance-none accent-pink-500" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  function spawnHeart() {
+    const container = document.getElementById('bg-elements');
+    const h = document.createElement("div");
+    h.className = "heart";
+    const emoji = ['💗', '🌸', '✨', '🤍', '🎀', '🍓'];
+    h.innerText = emoji[Math.floor(Math.random() * emoji.length)];
+    h.style.left = Math.random() * 95 + "vw"; 
+    h.style.fontSize = Math.random() * 15 + 15 + "px";
+    container.appendChild(h);
+    setTimeout(() => h.remove(), 6000);
+  }
+  setInterval(spawnHeart, 500);
+
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn = document.getElementById("noBtn");
+  const askArea = document.getElementById("askArea");
+  const msg = document.getElementById("message");
+  const music = document.getElementById("music");
+  const playBtn = document.getElementById("playBtn");
+  const albumArt = document.getElementById("albumArt");
+  const progress = document.getElementById("progress");
+
+  let scale = 1;
+
+  function moveNo() {
+    // Keeps the button within the card area so it doesn't disappear on small screens
+    const maxX = 50;
+    const maxY = 30;
+    const x = (Math.random() - 0.5) * maxX * 2;
+    const y = (Math.random() - 0.5) * maxY * 2;
+    
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    
+    // Limits the growth of the Yes button so it doesn't break the layout
+    if (scale < 2.5) {
+      scale += 0.15;
+      yesBtn.style.transform = `scale(${scale})`;
+    }
+  }
+
+  function sayYes() {
+    askArea.style.display = 'none';
+    msg.classList.remove("hidden");
+    for(let i=0; i<30; i++) setTimeout(spawnHeart, i*50);
+  }
+
+  function togglePlay() {
+    if (music.paused) {
+      music.play();
+      playBtn.textContent = "⏸";
+      albumArt.classList.add("spin-music");
+    } else {
+      music.pause();
+      playBtn.textContent = "▶";
+      albumArt.classList.remove("spin-music");
+    }
+  }
+
+  music.ontimeupdate = () => {
+    if (music.duration) progress.value = (music.currentTime / music.duration) * 100;
+  };
+
+  progress.oninput = () => {
+    if (music.duration) music.currentTime = (progress.value / 100) * music.duration;
+  };
+</script>
+</body>
+</html>
